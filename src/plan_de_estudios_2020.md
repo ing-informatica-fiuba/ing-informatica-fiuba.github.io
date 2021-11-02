@@ -2,6 +2,8 @@
 
 Este es el nuevo Plan de Estudios que estamos elaborando.
 
+**DRAFT 0.1**
+
 ## Primer Cuatrimestre
 
 | Créditos |  Materia                       |
