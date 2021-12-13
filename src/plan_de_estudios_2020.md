@@ -10,7 +10,7 @@ Este es el nuevo Plan de Estudios que estamos elaborando.
 |----------|--------------------------------|
 |     9    | Análisis Matemático            |
 |     4    | Sociedad y Estado              |
-|     6    | Introducción a la Programación |
+|     6    | Pensamiento Computacional      |
 
 ## Segundo Cuatrimestre
 
@@ -68,16 +68,16 @@ Este es el nuevo Plan de Estudios que estamos elaborando.
 |     6    | Ciencia de Datos                |
 |     6    | Electiva                        |
 |     6    | Taller de Seguridad Informática |
-|     6    | Concurrentes                    |
+|     6    | Concurrencia y Paralelismo      |
 
 ## Noveno Cuatrimestre
 
-| Créditos |  Materia         |
-|----------|------------------|
-|     6    | Distribuidos     |
-|     6    | Machine Learning |
-|     6    | Electiva         |
-|     6    | Electiva         |
+| Créditos |  Materia                  |
+|----------|---------------------------|
+|     6    | Sistemas Distribuidos     |
+|     6    | Aprendzaje Automático     |
+|     6    | Electiva                  |
+|     6    | Electiva                  |
 
 ## Décimo Cuatrimestre
 
@@ -85,5 +85,5 @@ Este es el nuevo Plan de Estudios que estamos elaborando.
 |----------|--------------------------------------|
 |     8    | Gestión Empresas de base tecnológica |
 |     4    | Legal                                |
-|     6    | Gestión de Proyectos                 |
+|     6    | Gestión de Desarrollo de Software    |
 |     14   | Trabajo Profesional                  |
