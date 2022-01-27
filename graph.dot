@@ -28,7 +28,6 @@ digraph {
     so[label="Sistemas Operativos", fillcolor=4, group=4]
     pro[label="Probabilidad y Estadística", fillcolor=1, group=1]
     ds[label="Ciencia de Datos", fillcolor=1, group=1]
-    ml[label="Aprendizaje Automático", fillcolor=1, group=1]
     bd[label="Bases de Datos", fillcolor=3, group=3]
     seg[label="Taller de Seguridad", fillcolor=3, group=3]
     con[label="Concurrencia y Paralelismo", fillcolor=3, group=3]
@@ -37,8 +36,9 @@ digraph {
     e1[label="Electiva 1"]
     e2[label="Electiva 2"]
     e3[label="Electiva 3"]
+    e4[label="Electiva 4"]
     tp[label="Trabajo Profesional"]
-    emp[label="Empresa Tecnpológica"]
+    emp[label="Empresa Tecnológica"]
 
     # distribucion por cuatrimestre
     {rank = same; "CBC1"; am1;  sye; pco;}
@@ -49,8 +49,8 @@ digraph {
     {rank = same; "6C"; pro; tal; is;}
     {rank = same; "7C"; so;bd; ds;}
     {rank = same; "8C"; lyc; con;seg;}
-    {rank = same; "9C"; dis; gs; ml; e1}
-    {rank = same; "10C"; emp; tp; e2; e3}
+    {rank = same; "9C"; dis; gs; e1; e2}
+    {rank = same; "10C"; emp; tp; e3; e4}
 
     # correlatividades
     aye ->  org -> tal -> so -> con -> dis
@@ -59,16 +59,16 @@ digraph {
     aye ->  tda
     aye ->  ds
     ids ->  tal
-    am2 ->  pro -> ml
+    am2 ->  pro
     alg2 -> pro 
     am2 -> ds
-    alg2 ->  ds -> ml
+    alg2 ->  ds
     org ->  lyc
     org ->  bd
     fi1 ->  fi2
     so  ->  seg
 
     # estas son solo para mantener la disposicion
-    ml  -> emp[style=invis]
-    ds  -> e1 -> tp[style=invis]
+    pro  -> e1 -> emp[style=invis]
+    ds  -> e2 -> tp[style=invis]
 }
