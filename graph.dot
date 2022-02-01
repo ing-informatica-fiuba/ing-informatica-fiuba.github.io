@@ -27,7 +27,7 @@ digraph {
     lyc[label="Lenguajes y Compiladores", fillcolor=4, group=4]
     so[label="Sistemas Operativos", fillcolor=4, group=4]
     pro[label="Probabilidad y Estadística", fillcolor=1, group=1]
-    ds[label="Ciencia de Datos", fillcolor=1, group=1]
+    ml[label="Aprendizaje Automático", fillcolor=1, group=1]
     bd[label="Bases de Datos", fillcolor=3, group=3]
     seg[label="Taller de Seguridad", fillcolor=3, group=3]
     con[label="Concurrencia y Paralelismo", fillcolor=3, group=3]
@@ -47,7 +47,7 @@ digraph {
     {rank = same; "4C"; alg2; fi1; org;}
     {rank = same; "5C"; fi2; par; tda;}
     {rank = same; "6C"; pro; tal; is;}
-    {rank = same; "7C"; so;bd; ds;}
+    {rank = same; "7C"; so;bd; ml;}
     {rank = same; "8C"; lyc; con;seg;}
     {rank = same; "9C"; dis; gs; e1; e2}
     {rank = same; "10C"; emp; tp; e3; e4}
@@ -57,18 +57,16 @@ digraph {
     ids ->  par -> is -> gs
     aye ->  par
     aye ->  tda
-    aye ->  ds
+    aye ->  ml
     ids ->  tal
     am2 ->  pro
-    alg2 -> pro 
-    am2 -> ds
-    alg2 ->  ds
+    alg2 -> pro -> ml 
     org ->  lyc
     org ->  bd
     fi1 ->  fi2
     so  ->  seg
 
     # estas son solo para mantener la disposicion
-    pro  -> e1 -> emp[style=invis]
-    ds  -> e2 -> tp[style=invis]
+    ml  -> e1 -> tp[style=invis]
+    ml -> e2 -> emp[style=invis]
 }
