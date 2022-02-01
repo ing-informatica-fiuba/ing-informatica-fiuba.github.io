@@ -46,7 +46,7 @@ A continuación se presentan las materias de cada cuatrimestre.
 
 | Créditos |  Materia                   |
 |----------|----------------------------|
-|     8    | Física 2                   |
+|     6    | Física 2                   |
 |     6    | Paradigmas de Programación |
 |     6    | Teoría de Algoritmos       |
 
