@@ -1,0 +1,152 @@
+digraph {
+    # grilla vertical de cuatrimestres
+    node[shape=underline]
+    "CBC1" -> "CBC2" -> "3C" -> "4C" -> "5C" -> "6C" -> "7C" -> "8C" -> "9C" -> "10C" [style=invis]
+
+    # lista de materias
+    node [shape=box, style="rounded,filled", width=2, colorscheme=pastel14]
+    am1[label="Análisis Matemático"]
+    alg1[label="Álgebra"]
+    pco[label="Pens. Computacional"]
+    sye[label="Sociedad y Estado"]
+    fis[label="Física"]
+    pci[label="Pens. Científico"]
+
+    am2[label="Análisis Matemático II", fillcolor=1, group=1]
+    alg2[label="Álgebra II", fillcolor=1, group=1]
+    aye[label="Algoritmos y Estr. de Datos", group=al]
+    ids[label="Intr. al Desarrollo de Soft.", fillcolor=2, group=2]
+    is[label="Ingeniería de Software", fillcolor=2, group=2]
+    gs[label="Gestión Pr. de Software", fillcolor=2, group=2]
+    par[label="Paradigmas de Progr.", group=2]
+    tda[label="Teoría de Algoritmos", group=al]
+    fi1[label="Física I", group=f]
+    fi2[label="Física II", group=f]
+    org[label="Organización del Computador", fillcolor=4, group=4]
+    tal[label="Taller de Programación", fillcolor=4, group=4]
+    lyc[label="Lenguajes y Compiladores", fillcolor=4, group=4]
+    so[label="Sistemas Operativos", fillcolor=4, group=4]
+    pro[label="Probabilidad y Estadística", fillcolor=1, group=1]
+    ml[label="Aprendizaje Automático", fillcolor=1, group=1]
+    bd[label="Bases de Datos", fillcolor=3, group=3]
+    seg[label="Taller de Seguridad", fillcolor=3, group=3]
+    con[label="Concurrencia y Paralelismo", fillcolor=3, group=3]
+    dis[label="Sistemas Distribuidos", fillcolor=3, group=3]
+
+    e1[label="Electiva 1"]
+    e2[label="Electiva 2"]
+    e3[label="Electiva 3"]
+    e4[label="Electiva 4"]
+    tp[label="Trabajo Profesional"]
+    emp[label="Empresa Base Tecno."]
+
+    # distribucion por cuatrimestre
+    {rank = same; "CBC1"; am1;  sye; pco;}
+    {rank = same; "CBC2"; alg1;  fis; pci;}
+    {rank = same; "3C"; am2;  aye; ids;}
+    {rank = same; "4C"; alg2; fi1; org;}
+    {rank = same; "5C"; fi2; par; tda;}
+    {rank = same; "6C"; pro; tal; is;}
+    {rank = same; "7C"; so;bd; ml;}
+    {rank = same; "8C"; lyc; con;seg;}
+    {rank = same; "9C"; dis; gs; e1; e2}
+    {rank = same; "10C"; emp; tp; e3; e4}
+
+    # correlatividades
+    aye ->  org -> so -> con -> dis
+    org -> tal -> con
+    ids ->  par -> is -> gs
+    aye ->  par
+    aye ->  tda
+    aye ->  ml
+    ids ->  tal
+    am2 ->  pro
+    am2 ->  fi2
+    alg2 -> pro -> ml 
+    org ->  lyc
+    org ->  bd
+    fi1 ->  fi2
+    so  ->  seg
+    
+
+    # estas son solo para mantener la disposicion
+    am1 -> alg1 -> ids [style=invis]
+    gs -> tp [style=invis]
+    dis -> emp [style=invis]
+}
+
+digraph {
+    # grilla vertical de cuatrimestres
+    node[shape=underline]
+    "CBC1" -> "CBC2" -> "3C" -> "4C" -> "5C" -> "6C" -> "7C" -> "8C" -> "9C" -> "10C" [style=invis]
+
+    # lista de materias
+    node [shape=box, style="rounded,filled", width=2, colorscheme=pastel14]
+    am1[label="Análisis Matemático"]
+    alg1[label="Álgebra"]
+    pco[label="Pens. Computacional"]
+    sye[label="Sociedad y Estado"]
+    fis[label="Física"]
+    pci[label="Pens. Científico"]
+
+    am2[label="Análisis Matemático II", fillcolor=1, group=1]
+    alg2[label="Álgebra II", fillcolor=1, group=1]
+    aye[label="Algoritmos y Estr. de Datos", group=al]
+    ids[label="Intr. al Desarrollo Soft.", fillcolor=2, group=2]
+    is[label="Ingeniería de Software", fillcolor=2, group=2]
+    gs[label="Gestión Pr. de Software", fillcolor=2, group=2]
+    par[label="Paradigmas de Prog.", group=2]
+    tda[label="Teoría de Algoritmos", group=al]
+    fi1[label="Física I", group=f]
+    fi2[label="Física II", group=f]
+    org[label="Organización del Computador", fillcolor=4, group=4]
+    tal[label="Taller de Programación", fillcolor=4, group=4]
+    lyc[label="Lenguajes y Compiladores", fillcolor=4, group=4]
+    so[label="Sistemas Operativos", fillcolor=4, group=4]
+    pro[label="Probabilidad y Estadística", fillcolor=1, group=1]
+    ml[label="Aprendizaje Automático", fillcolor=1, group=1]
+    bd[label="Bases de Datos", fillcolor=3, group=3]
+    seg[label="Taller de Seguridad", fillcolor=3, group=3]
+    con[label="Concurrencia y Paralelismo", fillcolor=3, group=3]
+    dis[label="Sistemas Distribuidos", fillcolor=3, group=3]
+
+    e1[label="Electiva 1"]
+    e2[label="Electiva 2"]
+    e3[label="Electiva 3"]
+    e4[label="Electiva 4"]
+    tp[label="Trabajo Profesional"]
+    emp[label="Empresa Base Tecno."]
+
+    # distribucion por cuatrimestre
+    {rank = same; "CBC1"; am1;  sye; pco;}
+    {rank = same; "CBC2"; alg1;  fis; pci;}
+    {rank = same; "3C"; am2;  aye; ids;}
+    {rank = same; "4C"; alg2; fi1; org;}
+    {rank = same; "5C"; fi2; par; tda;}
+    {rank = same; "6C"; pro; tal; bd;}
+    {rank = same; "7C"; so; is; ml;}
+    {rank = same; "8C"; lyc; con;seg;}
+    {rank = same; "9C"; dis; gs; e1; e2}
+    {rank = same; "10C"; emp; tp; e3; e4}
+
+    # correlatividades
+    aye ->  org -> so -> con -> dis
+    org -> tal -> con
+    ids ->  par -> is -> gs
+    aye ->  par
+    aye ->  tda
+    ids ->  tal
+    am2 ->  pro
+    am2 ->  fi2
+    alg2 -> pro -> ml 
+    org ->  lyc
+    org ->  bd -> ml
+    fi1 ->  fi2
+    so  ->  seg
+    
+
+    # estas son solo para mantener la disposicion
+    am1 -> alg1 -> ids [style=invis]
+    gs -> tp [style=invis]
+    dis -> emp [style=invis]
+}
