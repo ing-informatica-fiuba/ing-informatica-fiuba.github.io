@@ -6,7 +6,7 @@ Este es el nuevo Plan de Estudios que estamos elaborando.
 
 El siguiente es el grafo que muestra las correlativas:
 
-![Grafo de Correlatividades](img/plan.png "Grafo de Correlatividades")
+![Grafo de Correlatividades](img/plan2020.png "Grafo de Correlatividades")
 
 A continuación se presentan las materias de cada cuatrimestre.
 

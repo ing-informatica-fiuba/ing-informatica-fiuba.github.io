@@ -1,0 +1,76 @@
+digraph {
+    # grilla vertical de cuatrimestres
+    node[shape=underline]
+    "CBC1" -> "CBC2" -> "3C" -> "4C" -> "5C" -> "6C" -> "7C" -> "8C" -> "9C" -> "10C" [style=invis]
+
+    # lista de materias
+    node [shape=box, style="rounded,filled", width=2.5, colorscheme=pastel14]
+    am1[label="Análisis Matemático (9)"]
+    alg1[label="Álgebra (9)"]
+    pco[label="Pens. Computacional (6)"]
+    sye[label="Sociedad y Estado (4)"]
+    fis[label="Física (6)"]
+    pci[label="Pens. Científico (4)"]
+
+    am2[label="Análisis Matemático II (8)", fillcolor=1, group=1]
+    alg2[label="Álgebra II (8)", fillcolor=1, group=1]
+    aye[label="Algo. y Estr. de Datos (8)", group=al]
+    ids[label="Intr. Ing. Informática (8)", fillcolor=2, group=2]
+    is[label="Ingeniería de Software (6)", fillcolor=2, group=2]
+    gs[label="Gestión Pr. de Software (6)", fillcolor=2, group=2]
+    par[label="Paradigmas de Progr. (8)", group=2]
+    tda[label="Teoría de Algoritmos (6)", group=al]
+    fi1[label="Física I (6)", group=f]
+    fi2[label="Física II (6)", group=f]
+    org[label="Org. del Computador (8)", fillcolor=4, group=4]
+    tal[label="Taller de Programación (8)", fillcolor=4, group=4]
+    lyc[label="Lenguajes y Compiladores (6)", fillcolor=4, group=4]
+    so[label="Sistemas Operativos (8)", fillcolor=4, group=4]
+    pro[label="Probabilidad y Estadística (6)", fillcolor=1, group=1]
+    ml[label="Aprendizaje Automático (8)", fillcolor=1, group=1]
+    bd[label="Bases de Datos (6)", fillcolor=3, group=3]
+    seg[label="Taller de Seguridad (6)", fillcolor=3, group=3]
+    con[label="Concurrencia y Paralelismo (6)", fillcolor=3, group=3]
+    dis[label="Sistemas Distribuidos (8)", fillcolor=3, group=3]
+
+    e1[label="Electiva 1 (6)"]
+    e2[label="Electiva 2 (6)"]
+    e3[label="Electiva 3 (6)"]
+    e4[label="Electiva 4 (6)"]
+    tp[label="Trabajo Profesional (14)"]
+    emp[label="Empresa Base Tecno. (8)"]
+
+    # distribucion por cuatrimestre
+    {rank = same; "CBC1"; am1;  sye; pco;}
+    {rank = same; "CBC2"; alg1;  fis; pci;}
+    {rank = same; "3C"; am2;  aye; ids;}
+    {rank = same; "4C"; alg2; fi1; org;}
+    {rank = same; "5C"; fi2; par; tda;}
+    {rank = same; "6C"; pro; tal; is;}
+    {rank = same; "7C"; so;bd; ml;}
+    {rank = same; "8C"; lyc; con;seg;}
+    {rank = same; "9C"; dis; gs; e1; e2}
+    {rank = same; "10C"; emp; tp; e3; e4}
+
+    # correlatividades
+    aye ->  org -> so -> con -> dis
+    org -> tal -> con
+    ids ->  par -> is -> gs
+    aye ->  par
+    aye ->  tda
+    aye ->  ml
+    ids ->  tal
+    am2 ->  pro
+    am2 ->  fi2
+    alg2 -> pro -> ml 
+    org ->  lyc
+    org ->  bd
+    fi1 ->  fi2
+    so  ->  seg
+    
+
+    # estas son solo para mantener la disposicion
+    am1 -> alg1 -> ids [style=invis]
+    gs -> tp [style=invis]
+    dis -> emp [style=invis]
+}
