@@ -5,8 +5,8 @@ digraph {
 
     # lista de materias
     node [shape=box, style="rounded,filled", width=2.5, colorscheme=pastel14]
-    am1[label="Análisis Matemático (9)"]
-    alg1[label="Álgebra (9)"]
+    am1[label="Análisis Matemático (9)", group=1]
+    alg1[label="Álgebra (9)", group=1]
     pco[label="Pens. Computacional (6)"]
     sye[label="Sociedad y Estado (4)"]
     fis[label="Física (6)"]
@@ -19,19 +19,19 @@ digraph {
     is[label="Ingeniería de Software (6)", fillcolor=2, group=2]
     gs[label="Gestión Pr. de Software (6)", fillcolor=2, group=2]
     par[label="Paradigmas de Progr. (8)", group=2]
-    tda[label="Teoría de Algoritmos (6)", group=al]
+    tda[label="Teoría de Algoritmos (6)"]
     fi1[label="Física I (6)", group=f]
     fi2[label="Física II (6)", group=f]
-    org[label="Org. del Computador (8)", fillcolor=4, group=4]
-    tal[label="Taller de Programación (8)", fillcolor=4, group=4]
-    lyc[label="Lenguajes y Compiladores (6)", fillcolor=4, group=4]
-    so[label="Sistemas Operativos (8)", fillcolor=4, group=4]
+    org[label="Org. del Computador (8)", fillcolor=4]
+    tal[label="Taller de Programación (8)", fillcolor=4]
+    lyc[label="Lenguajes y Compiladores (6)", fillcolor=4]
+    so[label="Sistemas Operativos (8)", fillcolor=4]
     pro[label="Probabilidad y Estadística (6)", fillcolor=1, group=1]
     ml[label="Aprendizaje Automático (8)", fillcolor=1, group=1]
-    bd[label="Bases de Datos (6)", fillcolor=3, group=3]
-    seg[label="Taller de Seguridad (6)", fillcolor=3, group=3]
-    con[label="Concurrencia y Paralelismo (6)", fillcolor=3, group=3]
-    dis[label="Sistemas Distribuidos (8)", fillcolor=3, group=3]
+    bd[label="Bases de Datos (6)", fillcolor=3]
+    seg[label="Taller de Seguridad (6)", fillcolor=3]
+    con[label="Concurrencia y Paralelismo (6)", fillcolor=3]
+    dis[label="Sistemas Distribuidos (8)", fillcolor=3]
 
     e1[label="Electiva 1 (6)"]
     e2[label="Electiva 2 (6)"]
@@ -62,12 +62,12 @@ digraph {
     ids ->  tal
     am2 ->  pro
     am2 ->  fi2
-    alg2 -> pro -> ml 
+    alg2 -> pro -> ml
     org ->  lyc
     org ->  bd
     fi1 ->  fi2
-    so  ->  seg
-    
+    ids -> so  ->  seg
+
 
     # estas son solo para mantener la disposicion
     am1 -> alg1 -> ids [style=invis]
