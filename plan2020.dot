@@ -20,8 +20,7 @@ digraph {
     gs[label="Gestión Pr. de Software (6)", fillcolor=2, group=2]
     par[label="Paradigmas de Progr. (8)", group=2]
     tda[label="Teoría de Algoritmos (6)"]
-    fi1[label="Física I (6)", group=f]
-    fi2[label="Física II (6)", group=f]
+    fi2[label="Electr. y Magnetismo (8)", group=f]
     org[label="Org. del Computador (8)", fillcolor=4]
     tal[label="Taller de Programación (8)", fillcolor=4]
     lyc[label="Lenguajes y Compiladores (6)", fillcolor=4]
@@ -37,20 +36,21 @@ digraph {
     e2[label="Electiva 2 (6)"]
     e3[label="Electiva 3 (6)"]
     e4[label="Electiva 4 (6)"]
-    tp[label="Trabajo Profesional (14)"]
+    tp1[label="Tr. Profesional (6)"]
+    tp2[label="Tr. Profesional (cont.) (8)"]
     emp[label="Empresa Base Tecno. (8)"]
 
     # distribucion por cuatrimestre
     {rank = same; "CBC1"; am1;  sye; pco;}
     {rank = same; "CBC2"; alg1;  fis; pci;}
     {rank = same; "3C"; am2;  aye; ids;}
-    {rank = same; "4C"; alg2; fi1; org;}
-    {rank = same; "5C"; fi2; par; tda;}
-    {rank = same; "6C"; pro; tal; is;}
-    {rank = same; "7C"; so;bd; ml;}
+    {rank = same; "4C"; alg2; tda; org;}
+    {rank = same; "5C"; fi2; pro; par;}
+    {rank = same; "6C"; tal; is; bd}
+    {rank = same; "7C"; so; ml; e1; }
     {rank = same; "8C"; lyc; con;seg;}
-    {rank = same; "9C"; dis; gs; e1; e2}
-    {rank = same; "10C"; emp; tp; e3; e4}
+    {rank = same; "9C"; dis; gs; tp1; e2}
+    {rank = same; "10C"; emp; tp2; e3; e4}
 
     # correlatividades
     aye ->  org -> so -> con -> dis
@@ -65,12 +65,12 @@ digraph {
     alg2 -> pro -> ml
     org ->  lyc
     org ->  bd
-    fi1 ->  fi2
     ids -> so  ->  seg
 
 
     # estas son solo para mantener la disposicion
     am1 -> alg1 -> ids [style=invis]
-    gs -> tp [style=invis]
-    dis -> emp [style=invis]
+    bd -> e1 [style=invis]
+    gs -> emp [style=invis]
+    dis -> e3[style=invis]
 }
